@@ -1,0 +1,105 @@
+
+      
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise 🎁</title>
+
+  <style>
+    body {
+      background: #fff0f5;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      margin-top: 80px;
+      color: #c2185b;
+    }
+
+    /* 🎁 Gift Box */
+    .gift {
+      width: 120px;
+      height: 120px;
+      margin: 60px auto;
+      background: #ff4d6d;
+      position: relative;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+
+    .gift::before {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 20px;
+      background: #c2185b;
+      top: -20px;
+      left: 0;
+      border-radius: 8px;
+    }
+
+    .ribbon {
+      position: absolute;
+      width: 20px;
+      height: 120px;
+      background: #fff;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .lid {
+      position: absolute;
+      width: 120px;
+      height: 20px;
+      background: #c2185b;
+      top: -20px;
+      left: 0;
+      border-radius: 8px;
+      transform-origin: top center;
+      transition: transform 0.8s ease-out;
+    }
+
+    .gift:hover .lid {
+      transform: rotateX(90deg) translateY(-20px);
+    }
+
+    .open-text {
+      margin-top: 30px;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey 💝</h1>
+  <p>Here’s a surprise for you 🎁</p>
+
+  <!-- 🎁 Gift Box -->
+  <div class="gift" onclick="openGift()">
+    <div class="lid"></div>
+    <div class="ribbon"></div>
+  </div>
+
+  <div class="open-text">Tap the gift to open 💌</div>
+
+  <script>
+    function openGift() {
+      document.querySelector('.gift').style.transform = "scale(1.1)";
+      document.querySelector('.gift').style.opacity = "0.7";
+
+      setTimeout(() => {
+        window.location.href = "NISH.html";
+      }, 1000);
+    }
+  </script>
+
+</body>
+</html>
+
